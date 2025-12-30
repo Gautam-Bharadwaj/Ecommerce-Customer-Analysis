@@ -1,11 +1,11 @@
-# E-commerce Customer Analysis 📊
+# E-commerce Customer Analysis
 
-## 📌 Objective
+## Objective
 The objective of this project is to perform an advanced analysis of e-commerce customer data to understand purchasing behavior, identify high-value customers, calculate customer lifetime value (CLV), and analyze churn patterns. The insights derived from this analysis aim to support data-driven business and marketing decisions.
 
 ---
 
-## 📂 Dataset Description
+## Dataset Description
 The dataset contains transactional data from an e-commerce platform, including customer details, orders, products, pricing, and discounts.
 
 ### Key Columns:
@@ -22,7 +22,7 @@ The dataset contains transactional data from an e-commerce platform, including c
 
 ---
 
-## 🧰 Tools & Technologies Used
+## Tools & Technologies Used
 - **Python** (Pandas, NumPy)
 - **Data Visualization** (Matplotlib, Seaborn)
 - **Jupyter Notebook**
@@ -31,7 +31,7 @@ The dataset contains transactional data from an e-commerce platform, including c
 
 ---
 
-## 🔍 Key Analysis Performed
+## Key Analysis Performed
 
 ### 1. Data Cleaning & Preparation
 - Removed duplicate records
@@ -82,7 +82,7 @@ This helps identify customers who contribute the most long-term revenue.
 
 ---
 
-## 📊 Dashboard (Optional)
+## Dashboard (Optional)
 A dashboard was created to visualize:
 - Revenue trends
 - Customer segments
@@ -93,7 +93,7 @@ A dashboard was created to visualize:
 
 ---
 
-## 💡 Key Insights
+## Key Insights
 - A small group of **Champion customers** contributes a large portion of total revenue.
 - Customers inactive for more than 90 days show a high probability of churn.
 - Loyal customers demonstrate consistent purchasing behavior and high engagement.
@@ -101,7 +101,7 @@ A dashboard was created to visualize:
 
 ---
 
-## 🧠 Business Recommendations
+## Business Recommendations
 - Offer exclusive rewards and early access deals to Champion customers.
 - Run personalized re-engagement campaigns for At-Risk customers.
 - Optimize discount strategies to focus on high-CLV segments.
@@ -109,7 +109,7 @@ A dashboard was created to visualize:
 
 ---
 
-## ▶️ How to Run the Project
+## How to Run the Project
 1. Clone the repository:
 git clone <repository-url>
 
@@ -128,7 +128,7 @@ Copy code
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 ecommerce-customer-analysis/
 │
 ├── dashboard/
@@ -145,11 +145,11 @@ Copy code
 
 ---
 
-## 📄 Conclusion
+## Conclusion
 This project demonstrates how data analytics techniques such as RFM analysis, customer segmentation, churn detection, and CLV modeling can be applied to real-world e-commerce data to drive meaningful business decisions.
 
 ---
 
-## 👤 Author
+## Author
 **Kumar Gautam**  
 Data Analytics | Python | SQL | Business Insights
