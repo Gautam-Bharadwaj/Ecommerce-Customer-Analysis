@@ -1,155 +1,60 @@
-# E-commerce Customer Analysis
+# Ecommerce Customer Analysis
 
-## Objective
-The objective of this project is to perform an advanced analysis of e-commerce customer data to understand purchasing behavior, identify high-value customers, calculate customer lifetime value (CLV), and analyze churn patterns. The insights derived from this analysis aim to support data-driven business and marketing decisions.
+I built this project to dive deep into how e-commerce businesses can actually use their data to make better decisions. Instead of just looking at total sales, I wanted to see if I could figure out who the most valuable customers are, who we might be losing, and how much a customer is likely to be worth over time.
 
----
+## Why this project?
+In a real business, you can't treat every customer the same. Some people buy once and never come back, while others are "champions" who keep the lights on. I wanted to apply common data science techniques like RFM analysis and CLV modeling to a transactional dataset to turn raw numbers into actual business strategy.
 
-## Dataset Description
-The dataset contains transactional data from an e-commerce platform, including customer details, orders, products, pricing, and discounts.
+## What's in the data?
+The dataset tracks individual transactions. It's got the usual stuff you'd expect:
+- Customer and Order IDs
+- Transaction dates
+- Product info (categories, prices)
+- Discounts and payment methods
+- Locations (mostly India, USA, UK, etc.)
 
-### Key Columns:
-- customer_id  
-- order_id  
-- order_date  
-- product_id  
-- category  
-- price  
-- quantity  
-- discount  
-- payment_method  
-- country  
+## The Game Plan
+I broke the analysis down into a few main stages:
 
----
+### 1. Cleaning and Prep
+Data is rarely ever ready to go. I had to handle missing values, get rid of duplicates, and make sure dates were actually in a format Python could work with. I also calculated the "total amount" for each order by factoring in price, quantity, and discounts.
 
-## Tools & Technologies Used
-- **Python** (Pandas, NumPy)
-- **Data Visualization** (Matplotlib, Seaborn)
-- **Jupyter Notebook**
-- **Power BI** (for dashboard – optional)
-- **Git & GitHub**
+### 2. Exploratory Analysis (EDA)
+Before doing anything fancy, I looked at the trends. I plotted out monthly revenue to see how the business was performing over time and checked which categories were the most popular.
 
----
+### 3. RFM Analysis & Segmentation
+This was the core part. I scored every customer on three things:
+- **Recency:** How long has it been since their last order?
+- **Frequency:** How often do they shop?
+- **Monetary:** How much have they spent in total?
 
-## Key Analysis Performed
+Based on these scores, I grouped them into segments like 'Champions', 'Loyal Customers', 'At Risk', and 'Needs Attention'. This makes it much easier to decide who to send a discount code to and who to invite to a loyalty program.
 
-### 1. Data Cleaning & Preparation
-- Removed duplicate records
-- Handled missing values
-- Converted date columns to proper datetime format
-- Created new features such as total revenue and order month
+### 4. CLV and Churn
+I also calculated the **Customer Lifetime Value (CLV)** to estimate long-term revenue and flagged anyone who hadn't bought anything in over 90 days as "churned."
 
----
+## What I found
+- A small group of **Champions** actually drives a huge chunk of the revenue.
+- If a customer stops buying for 90 days, there's a really high chance they won't come back without some kind of nudge.
+- Discounts are great, but they don't always mean a customer will stay loyal in the long run.
 
-### 2. Exploratory Data Analysis (EDA)
-- Monthly revenue trends
-- Customer purchasing patterns
-- Product and category-level insights
+## Recommendations
+- **Reward the best:** Give the "Champions" early access or special perks.
+- **Save the "At Risk":** Focus re-engagement emails on people who used to be active but have gone quiet.
+- **Watch the margins:** Don't just throw discounts at everyone; use the CLV data to see where it actually makes sense.
 
----
-
-### 3. RFM Analysis (Recency, Frequency, Monetary)
-- **Recency**: Days since last purchase  
-- **Frequency**: Number of orders  
-- **Monetary**: Total amount spent  
-
-Customers were scored and segmented based on RFM values to identify:
-- Champions
-- Loyal Customers
-- At-Risk Customers
-- Customers Needing Attention
-
----
-
-### 4. Customer Segmentation
-Customers were grouped into meaningful segments using RFM scores to help tailor marketing and retention strategies.
-
----
-
-### 5. Customer Lifetime Value (CLV)
-CLV was calculated using:
-CLV = Average Order Value × Purchase Frequency × Customer Lifespan
-
-yaml
-Copy code
-This helps identify customers who contribute the most long-term revenue.
-
----
-
-### 6. Churn Analysis
-- Customers with no purchases in the last **90 days** were marked as churned
-- Churn trends were analyzed across different customer segments
-
----
-
-## Dashboard (Optional)
-A dashboard was created to visualize:
-- Revenue trends
-- Customer segments
-- Top-performing products
-- Churn distribution
-
-*(Dashboard files or screenshots are available in the `dashboard/` folder.)*
-
----
-
-## Key Insights
-- A small group of **Champion customers** contributes a large portion of total revenue.
-- Customers inactive for more than 90 days show a high probability of churn.
-- Loyal customers demonstrate consistent purchasing behavior and high engagement.
-- Heavy discounting does not always correlate with higher customer lifetime value.
-
----
-
-## Business Recommendations
-- Offer exclusive rewards and early access deals to Champion customers.
-- Run personalized re-engagement campaigns for At-Risk customers.
-- Optimize discount strategies to focus on high-CLV segments.
-- Use customer segmentation for targeted marketing and retention strategies.
-
----
-
-## How to Run the Project
-1. Clone the repository:
-git clone <repository-url>
-
-css
-Copy code
-2. Navigate to the project folder:
-cd ecommerce-customer-analysis
-
-markdown
-Copy code
-3. Open the notebook:
-jupyter notebook notebooks/analysis.ipynb
-
-yaml
-Copy code
-
----
+## How to run it
+If you want to check out the code:
+1. Clone this repo.
+2. Make sure you have `pandas`, `matplotlib`, and `seaborn` installed.
+3. Open up `notebooks/analysis.ipynb` in Jupyter or VS Code.
 
 ## Project Structure
-ecommerce-customer-analysis/
-│
-├── dashboard/
-├── data/
-│ ├── raw_data.csv
-│ └── cleaned_data.csv
-├── notebooks/
-│ └── analysis.ipynb
-├── README.md
-└── report.pdf
-
-yaml
-Copy code
+- `data/`: Contains the raw and processed CSV files.
+- `notebooks/`: This is where the actual Python analysis lives.
+- `report.pdf`: A summary report of the findings.
+- `dashboard/`: A placeholder for some visual charts.
 
 ---
-
-## Conclusion
-This project demonstrates how data analytics techniques such as RFM analysis, customer segmentation, churn detection, and CLV modeling can be applied to real-world e-commerce data to drive meaningful business decisions.
-
----
-
-## Author
-**Kumar Gautam**  
-Data Analytics | Python | SQL | Business Insights
+**Author:** Kumar Gautam  
+Just a project to explore the intersection of Data and Business.
