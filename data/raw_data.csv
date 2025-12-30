@@ -1,0 +1,11 @@
+customer_id,order_id,order_date,product_id,category,price,quantity,discount,payment_method,country
+C001,O1001,2024-01-05,P101,Electronics,50000,1,2000,Credit Card,India
+C002,O1002,2024-01-07,P102,Clothing,2500,2,200,UPI,India
+C003,O1003,2024-01-10,P103,Home Decor,3500,1,0,Debit Card,USA
+C001,O1004,2024-02-02,P104,Electronics,15000,1,1000,Credit Card,India
+C004,O1005,2024-02-10,P105,Beauty,1200,3,100,Wallet,UK
+C002,O1006,2024-03-01,P106,Clothing,1800,1,0,UPI,India
+C005,O1007,2024-03-15,P107,Electronics,72000,1,5000,Credit Card,Canada
+C003,O1008,2024-04-05,P108,Home Decor,4000,2,300,Debit Card,USA
+C006,O1009,2024-05-01,P109,Sports,3000,1,0,UPI,India
+C001,O1010,2024-06-18,P110,Electronics,22000,1,1500,Credit Card,India
